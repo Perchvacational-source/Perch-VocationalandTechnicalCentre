@@ -8,6 +8,7 @@
         :root {
             --primary: #0f4c81;
             --secondary: #f5a623;
+            --secondary-hover: #e09612;
             --dark: #2c3e50;
             --light: #f8f9fa;
             --text: #333333;
@@ -95,19 +96,29 @@
             margin: 0 auto 2rem;
         }
 
-        .btn {
+        /* Golden Button Styling */
+        .btn-golden {
             display: inline-block;
             background-color: var(--secondary);
-            color: var(--dark);
-            padding: 0.75rem 2rem;
+            color: var(--dark) !important;
+            padding: 0.85rem 2.5rem;
             text-decoration: none;
             font-weight: bold;
             border-radius: 4px;
-            transition: background 0.3s;
+            font-size: 1.1rem;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 6px rgba(245, 166, 35, 0.3);
+            border: none;
+            cursor: pointer;
         }
 
-        .btn:hover {
-            background-color: #e09612;
+        .btn-golden:hover {
+            background-color: var(--secondary-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-golden:active {
+            transform: translateY(0);
         }
 
         /* Registration Download Box Layout */
@@ -132,25 +143,6 @@
             color: var(--primary);
             margin-bottom: 0.5rem;
             font-weight: bold;
-        }
-
-        .btn-download {
-            display: inline-block;
-            background-color: #27ae60 !important;
-            color: white !important;
-            text-align: center;
-            padding: 1rem 2.5rem;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
-            transition: background 0.3s;
-            margin-top: 1.2rem;
-            font-size: 1.15rem;
-            box-shadow: 0 4px 6px rgba(39, 174, 96, 0.2);
-        }
-
-        .btn-download:hover {
-            background-color: #219150 !important;
         }
 
         /* Sections General */
@@ -234,10 +226,6 @@
             margin-bottom: 1rem;
         }
 
-        .contact-info strong {
-            color: var(--primary);
-        }
-
         form {
             display: flex;
             flex-direction: column;
@@ -294,7 +282,10 @@
     <header class="hero" id="home">
         <h2>Shape Your Future with Practical Skills</h2>
         <p>Empowering students with hands-on technical training to meet local industry demands and build sustainable careers.</p>
-        <a href="#apply" class="btn">📥 Get Registration Form</a>
+        <!-- ACTIVE GOLDEN HERO BUTTON -->
+        <a href="perch_registration_form.pdf" download="Perch_Centre_Registration_Form.pdf" class="btn-golden">
+            📥 Download Registration Form
+        </a>
     </header>
 
     <!-- About Our Centre Section -->
@@ -338,3 +329,6 @@
 
     <!-- Contact Section -->
     <section id="contact">
+        <h3>Contact & Enquiries</h3>
+        <div class="contact-container">
+            <div class="contact-info">
