@@ -210,7 +210,7 @@
         /* Courses Section */
         .courses-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
 
@@ -229,13 +229,27 @@
 
         .course-card h4 {
             color: var(--dark);
-            margin-bottom: 1rem;
-            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.35rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .course-card p {
             font-size: 0.95rem;
-            color: #555555;
+            color: #475569;
+            margin-bottom: 1rem;
+        }
+
+        .course-meta {
+            background-color: #e2e8f0;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--dark);
+            display: inline-block;
         }
 
         /* Contact Section */
@@ -334,13 +348,3 @@
             <div>
                 <p>Welcome to <strong>Perch Vocational and Technical Centre</strong>. We help students learn useful, everyday job skills. Our short courses give you the training you need to find a good job quickly and support your family.</p>
                 <br>
-                <p>At our school, you will spend your time practicing with real tools, learning by doing, and getting ready for real work in your community.</p>
-            </div>
-            <div>
-                <img src="https://unsplash.com" alt="Students learning practical skills" class="about-img">
-            </div>
-        </div>
-    </section>
-
-    <!-- Vocational Streams / Courses Section -->
-    <section id="courses">
