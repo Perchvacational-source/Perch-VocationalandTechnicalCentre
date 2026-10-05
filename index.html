@@ -57,7 +57,30 @@
             padding: 0.3rem;
             font-size: 0.85rem;
             font-style: italic;
+            border-bottom: 1px solid #0f4c81;
+        }
+
+        .quick-contact-bar {
+            background-color: #f1f5f9;
+            color: var(--dark);
+            text-align: center;
+            padding: 0.4rem 1rem;
+            font-size: 0.85rem;
             border-bottom: 2px solid var(--secondary);
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .quick-contact-bar a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .quick-contact-bar a:hover {
+            text-decoration: underline;
         }
 
         .nav-links {
@@ -226,6 +249,16 @@
             margin-bottom: 1rem;
         }
 
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
         form {
             display: flex;
             flex-direction: column;
@@ -256,6 +289,7 @@
             .nav-links { display: none; }
             .about-grid, .contact-container { grid-template-columns: 1fr; gap: 2rem; }
             .hero h2 { font-size: 2rem; }
+            .quick-contact-bar { flex-direction: column; gap: 0.3rem; }
         }
     </style>
 </head>
@@ -277,12 +311,17 @@
     <div class="motto-bar">
         "The fear of the Lord is the beginning of knowledge." — Proverbs 1:7
     </div>
+    
+    <!-- Quick Contact Row under Header -->
+    <div class="quick-contact-bar">
+        <span>📞 <strong>Phone Directory:</strong> <a href="tel:+67724257">677 24257</a> / <a href="tel:+67724889">24889</a></span>
+        <span>✉️ <strong>Email Address:</strong> <a href="mailto:perchchristianschool@gmail.com">perchchristianschool@gmail.com</a></span>
+    </div>
 
     <!-- Hero Banner -->
     <header class="hero" id="home">
         <h2>Shape Your Future with Practical Skills</h2>
         <p>Empowering students with hands-on technical training to meet local industry demands and build sustainable careers.</p>
-        <!-- LINE 106: ACTIVE GOLDEN HERO BUTTON -->
         <a href="perch_registration_form.pdf" download="Perch_Centre_Registration_Form.pdf" class="btn-golden">
             📥 Download Registration Form
         </a>
@@ -305,30 +344,3 @@
 
     <!-- Vocational Streams / Courses Section -->
     <section id="courses">
-        <h3>Our Vocational Streams</h3>
-        <div class="courses-grid">
-            <!-- Computing & Networking -->
-            <div class="course-card">
-                <h4>💻 Computing & Networking</h4>
-                <p>Hardware troubleshooting, operating systems installation, and local area network setups designed for technical support fields.</p>
-            </div>
-
-            <!-- Tailoring & Design -->
-            <div class="course-card">
-                <h4>🪡 Tailoring & Design</h4>
-                <p>Pattern drawing, fabric preparation, garments cutting, and operational sewing procedures to launch independent design shops.</p>
-            </div>
-
-            <!-- Agriculture -->
-            <div class="course-card">
-                <h4>🌾 Agriculture</h4>
-                <p>Sustainable crop farming practices, livestock production basic elements, and essential agribusiness tools for rural stability.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h3>Contact & Enquiries</h3>
-        <div class="contact-container">
-            <div class="contact-info">
