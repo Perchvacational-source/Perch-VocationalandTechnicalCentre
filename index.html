@@ -24,7 +24,7 @@
             color: var(--text);
             line-height: 1.6;
             background-color: #ffffff;
-        }
+        } frag
 
         /* Navigation */
         nav {
@@ -41,8 +41,10 @@
         }
 
         .logo h1 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .nav-links {
@@ -188,6 +190,9 @@
         }
 
         /* Responsive Design */
+        @media (max-width: 992px) {
+            nav { flex-direction: column; gap: 1rem; text-align: center; }
+        }
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .about-grid, .contact-container { grid-template-columns: 1fr; gap: 2rem; }
@@ -200,7 +205,7 @@
     <!-- Header & Navigation -->
     <nav>
         <div class="logo">
-            <h1>Perch Centre</h1>
+            <h1>Perch Vocational And Technical Centre</h1>
         </div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
@@ -213,7 +218,7 @@
     <!-- Hero Banner -->
     <header class="hero" id="home">
         <h2>Shape Your Future with Practical Skills</h2>
-        <p>Emporing student hands-on technical training to meet local industry demands and build sustainable careers.</p>
+        <p>Empowering students with hands-on technical training to meet local industry demands and build sustainable careers.</p>
         <a href="#contact" class="btn">Enrol Today</a>
     </header>
 
