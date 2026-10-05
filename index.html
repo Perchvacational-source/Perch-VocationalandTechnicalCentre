@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perch - Registration Form</title>
+    <title>Perch - Resource Downloads</title>
     <style>
         :root {
             --primary-color: #2563eb;
@@ -11,7 +11,7 @@
             --bg-color: #f8fafc;
             --card-bg: #ffffff;
             --text-color: #1e293b;
-            --border-color: #cbd5e1;
+            --border-color: #e2e8f0;
         }
 
         body {
@@ -24,9 +24,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
         }
 
-        .form-container {
+        .container {
             background-color: var(--card-bg);
             padding: 32px;
             border-radius: 12px;
@@ -53,141 +55,111 @@
             font-size: 15px;
         }
 
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+        .category-list {
+            display: flex;
+            flex-direction: column;
             gap: 16px;
         }
 
-        @media (max-width: 480px) {
-            .form-row {
-                grid-template-columns: 1fr;
-                gap: 0;
-            }
-        }
-
-        label {
-            display: block;
-            font-weight: 500;
-            font-size: 14px;
-            margin-bottom: 6px;
-            color: #475569;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        select {
-            width: 100%;
-            padding: 10px 12px;
+        .category-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
             border: 1px solid var(--border-color);
-            border-radius: 6px;
-            font-size: 15px;
+            border-radius: 8px;
             background-color: #fff;
-            box-sizing: border-box;
-            transition: border-color 0.2s, box-shadow 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        input:focus, select:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(37, 99, 233, 0.15);
+        .category-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
 
-        .checkbox-group {
+        .category-info {
             display: flex;
             align-items: center;
-            gap: 8px;
-            margin-top: 12px;
+            gap: 12px;
         }
 
-        .checkbox-group input {
-            width: 16px;
-            height: 16px;
-            cursor: pointer;
+        .category-icon {
+            font-size: 24px;
         }
 
-        .checkbox-group label {
-            margin-bottom: 0;
-            cursor: pointer;
+        .category-name {
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--text-color);
         }
 
-        button {
-            width: 100%;
-            padding: 12px;
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
             background-color: var(--primary-color);
             color: white;
-            border: none;
+            text-decoration: none;
             border-radius: 6px;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 600;
-            cursor: pointer;
             transition: background-color 0.2s;
-            margin-top: 12px;
         }
 
-        button:hover {
+        .download-btn:hover {
             background-color: var(--primary-hover);
+        }
+
+        @media (max-width: 480px) {
+            .category-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            .download-btn {
+                width: 100%;
+                justify-content: center;
+                box-sizing: border-box;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="form-container">
+<div class="container">
     <div class="header">
-        <h1>Perch</h1>
-        <p>Create your account to get started</p>
+        <h1>Perch Resources</h1>
+        <p>Select a sector below to download your specific registration materials</p>
     </div>
 
-    <form action="#" method="POST">
-        <div class="form-row">
-            <div class="form-group">
-                <label for="first-name">First Name</label>
-                <input type="text" id="first-name" name="first_name" required>
+    <div class="category-list">
+        <!-- Computing & Networking Section -->
+        <div class="category-card">
+            <div class="category-info">
+                <span class="category-icon">💻</span>
+                <span class="category-name">Computing & Networking</span>
             </div>
-            <div class="form-group">
-                <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" name="last_name" required>
+            <a href="path/to/computing-form.pdf" class="download-btn" download>Download Form</a>
+        </div>
+
+        <!-- Tailoring & Design Section -->
+        <div class="category-card">
+            <div class="category-info">
+                <span class="category-icon">🪡</span>
+                <span class="category-name">Tailoring & Design</span>
             </div>
+            <a href="path/to/tailoring-form.pdf" class="download-btn" download>Download Form</a>
         </div>
 
-        <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-
-        <div class="form-group">
-            <label for="account-type">Account Type</label>
-            <select id="account-type" name="account_type" required>
-                <option value="" disabled selected>Select your account type</option>
-                <option value="personal">Personal Account</option>
-                <option value="business">Business / Professional</option>
-                <option value="partner">Partner Agency</option>
-            </select>
-        </div>
-
-        <div class="form-row">
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+        <!-- Agriculture Section -->
+        <div class="category-card">
+            <div class="category-info">
+                <span class="category-icon">🌾</span>
+                <span class="category-name">Agriculture</span>
             </div>
-            <div class="form-group">
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm_password" required>
-            </div>
+            <a href="path/to/agriculture-form.pdf" class="download-btn" download>Download Form</a>
         </div>
-
-        <div class="checkbox-group">
-            <input type="checkbox" id="terms" name="terms" required>
-            <label for="terms">I agree to the Terms of Service and Privacy Policy</label>
-        </div>
-
-        <button type="submit">Complete Registration</button>
-    </form>
+    </div>
 </div>
 
 </body>
