@@ -144,7 +144,7 @@
             transform: translateY(0);
         }
 
-        /* Bottom Application & Stream Layout Grid */
+        /* Registration Download Box Layout */
         .download-section {
             background-color: var(--light);
             border-top: 1px solid var(--border-color);
@@ -155,47 +155,17 @@
             border: 2px solid var(--primary);
             padding: 2.5rem;
             border-radius: 8px;
-            max-width: 850px;
+            max-width: 650px;
             margin: 0 auto;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             text-align: center;
         }
 
         .download-box h4 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: var(--primary);
-            margin-bottom: 1.5rem;
-            font-weight: bold;
-        }
-
-        .bottom-courses-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-            text-align: left;
-        }
-
-        .bottom-course-card {
-            background: var(--light);
-            padding: 1.25rem;
-            border-radius: 6px;
-            border-top: 3px solid var(--primary);
-        }
-
-        .bottom-course-card h5 {
-            font-size: 1.1rem;
-            color: var(--dark);
             margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .bottom-course-card p {
-            font-size: 0.85rem;
-            color: #555555;
-            line-height: 1.4;
+            font-weight: bold;
         }
 
         /* Sections General */
@@ -235,6 +205,51 @@
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Courses Section */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .course-card {
+            background: var(--light);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary);
+            transition: transform 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .course-card h4 {
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+            font-size: 1.35rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .course-card p {
+            font-size: 0.95rem;
+            color: #475569;
+            margin-bottom: 1rem;
+        }
+
+        .course-meta {
+            background-color: #e2e8f0;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--dark);
+            display: inline-block;
         }
 
         /* Contact Section */
@@ -302,6 +317,7 @@
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#courses">Courses</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#apply">Apply Now</a></li>
         </ul>
@@ -320,8 +336,8 @@
     <header class="hero" id="home">
         <h2>Shape Your Future with Practical Skills</h2>
         <p>Empowering students with hands-on technical training to meet local industry demands and build sustainable careers.</p>
-        <a href="#apply" class="btn-golden">
-            📥 Get Registration Form
+        <a href="perch_registration_form.pdf" download="Perch_Centre_Registration_Form.pdf" class="btn-golden">
+            📥 Download Registration Form
         </a>
     </header>
 
@@ -332,16 +348,3 @@
             <div>
                 <p>Welcome to <strong>Perch Vocational and Technical Centre</strong>. We help students learn useful, everyday job skills. Our short courses give you the training you need to find a good job quickly and support your family.</p>
                 <br>
-                <p>At our school, you will spend your time practicing with real tools, learning by doing, and getting ready for real work in your community.</p>
-            </div>
-            <div>
-                <img src="https://unsplash.com" alt="Students learning practical skills" class="about-img">
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h3>Contact & Enquiries</h3>
-        <div class="contact-container">
-            <div class="contact-info">
