@@ -47,6 +47,16 @@
             letter-spacing: 0.5px;
         }
 
+        .motto-bar {
+            background-color: #0b3a62;
+            color: #f5a623;
+            text-align: center;
+            padding: 0.3rem;
+            font-size: 0.85rem;
+            font-style: italic;
+            border-bottom: 2px solid var(--secondary);
+        }
+
         .nav-links {
             list-style: none;
             display: flex;
@@ -96,6 +106,39 @@
 
         .btn:hover {
             background-color: #e09612;
+        }
+
+        /* Registration Download Box Layout */
+        .download-box {
+            background: #ffffff;
+            border: 2px solid var(--primary);
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .download-box h5 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .btn-download {
+            display: block;
+            background-color: #27ae60 !important;
+            color: white !important;
+            text-align: center;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .btn-download:hover {
+            background-color: #219150 !important;
         }
 
         /* Sections General */
@@ -214,25 +257,36 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+    <div class="motto-bar">
+        "The fear of the Lord is the beginning of knowledge." — Proverbs 1:7
+    </div>
 
     <!-- Hero Banner -->
     <header class="hero" id="home">
         <h2>Shape Your Future with Practical Skills</h2>
         <p>Empowering students with hands-on technical training to meet local industry demands and build sustainable careers.</p>
-        <a href="#contact" class="btn">Enrol Today</a>
+        <a href="#contact" class="btn">Enrol Now</a>
     </header>
 
-    <!-- About Section -->
+    <!-- About Our Centre Section -->
     <section id="about">
         <h3>About Our Centre</h3>
         <div class="about-grid">
             <div>
-                <p>The <strong>Perch Vocational and Technical Centre</strong> is dedicated to delivering high-quality, practical training programs. We bridge the skills gap by offering accredited technical courses tailored to build immediate employment opportunities.</p>
+                <p>Welcome to <strong>Perch Vocational and Technical Centre</strong>. We help students learn useful, everyday job skills. Our short courses give you the training you need to find a good job quickly and support your family.</p>
                 <br>
-                <p>Our focus relies on hands-on practical environments, modern industrial knowledge, and professional values that empower community development.</p>
+                <p>At our school, you will spend your time practicing with real tools, learning by doing, and getting ready for real work in your community.</p>
+                <br>
+                <!-- New Registration Download Box added in place of Pledge -->
+                <div class="download-box" style="margin-top: 1rem;">
+                    <h5>📋 Get Started</h5>
+                    <a href="registration-form.pdf" download="Perch_Centre_Registration_Form.pdf" class="btn btn-download">
+                        📥 Download Registration Form
+                    </a>
+                </div>
             </div>
             <div>
-                <img src="https://unsplash.com" alt="Technical Workshop" style="width:100%; border-radius:8px;">
+                <img src="https://unsplash.com" alt="Students learning" style="width:100%; border-radius:8px;">
             </div>
         </div>
     </section>
@@ -258,7 +312,7 @@
         </div>
     </section>
 
-    <!-- Contact & Registration -->
+    <!-- Contact & Admissions Section -->
     <section id="contact">
         <h3>Contact & Admissions</h3>
         <div class="contact-container">
@@ -266,26 +320,3 @@
                 <h4>Get in Touch</h4>
                 <br>
                 <p><strong>📍 Location:</strong> Panatina Area, Honiara, Solomon Islands</p>
-                <p><strong>✉️ Email:</strong> admissions@perchcentre.edu.sb</p>
-                <p><strong>📞 Phone:</strong> +677 23456</p>
-                <br>
-                <p>Drop by our administration desk during weekdays from 8:00 AM to 4:30 PM for formal registration guidelines.</p>
-            </div>
-            <div>
-                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! Your inquiry has been simulated.');">
-                    <input type="text" placeholder="Your Full Name" required>
-                    <input type="email" placeholder="Your Email Address" required>
-                    <textarea rows="5" placeholder="Which course are you interested in?" required></textarea>
-                    <button type="submit" class="btn" style="border: none; cursor: pointer;">Send Inquiry</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Perch Vocational and Technical Centre. All Rights Reserved.</p>
-    </footer>
-
-</body>
-</html>
