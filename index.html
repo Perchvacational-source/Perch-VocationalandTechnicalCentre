@@ -24,6 +24,7 @@
             color: var(--text);
             line-height: 1.6;
             background-color: #ffffff;
+            scroll-behavior: smooth;
         }
 
         /* Navigation */
@@ -109,32 +110,41 @@
         }
 
         /* Registration Download Box Layout */
+        .download-section {
+            background-color: var(--light);
+            border-top: 1px solid var(--border-color);
+        }
+
         .download-box {
             background: #ffffff;
             border: 2px solid var(--primary);
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: 6px;
-            margin-top: 1.5rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            text-align: center;
         }
 
-        .download-box h5 {
-            font-size: 1.2rem;
+        .download-box h4 {
+            font-size: 1.5rem;
             color: var(--primary);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             font-weight: bold;
         }
 
         .btn-download {
-            display: block;
+            display: inline-block;
             background-color: #27ae60 !important;
             color: white !important;
             text-align: center;
-            padding: 0.75rem 1.5rem;
+            padding: 0.85rem 2rem;
             text-decoration: none;
             font-weight: bold;
             border-radius: 4px;
             transition: background 0.3s;
+            margin-top: 1rem;
+            font-size: 1.1rem;
         }
 
         .btn-download:hover {
@@ -173,6 +183,13 @@
             align-items: center;
         }
 
+        .about-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
         /* Courses Section */
         .courses-grid {
             display: grid;
@@ -199,6 +216,11 @@
             font-size: 1.25rem;
         }
 
+        .course-card p {
+            font-size: 0.95rem;
+            color: #555555;
+        }
+
         /* Contact Section */
         .contact-container {
             display: grid;
@@ -208,6 +230,10 @@
 
         .contact-info p {
             margin-bottom: 1rem;
+        }
+
+        .contact-info strong {
+            color: var(--primary);
         }
 
         form {
@@ -221,6 +247,7 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 1rem;
+            width: 100%;
         }
 
         /* Footer */
@@ -229,7 +256,6 @@
             color: white;
             text-align: center;
             padding: 2rem;
-            margin-top: 3rem;
         }
 
         /* Responsive Design */
@@ -246,7 +272,7 @@
 <body>
 
     <!-- Header & Navigation -->
-    <nav>
+    <nav id="top">
         <div class="logo">
             <h1>Perch Vocational And Technical Centre</h1>
         </div>
@@ -255,6 +281,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#courses">Courses</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#download">Download Form</a></li>
         </ul>
     </nav>
     <div class="motto-bar">
@@ -265,7 +292,7 @@
     <header class="hero" id="home">
         <h2>Shape Your Future with Practical Skills</h2>
         <p>Empowering students with hands-on technical training to meet local industry demands and build sustainable careers.</p>
-        <a href="#contact" class="btn">Enrol Now</a>
+        <a href="#download" class="btn">📥 Get Registration Form</a>
     </header>
 
     <!-- About Our Centre Section -->
@@ -276,47 +303,39 @@
                 <p>Welcome to <strong>Perch Vocational and Technical Centre</strong>. We help students learn useful, everyday job skills. Our short courses give you the training you need to find a good job quickly and support your family.</p>
                 <br>
                 <p>At our school, you will spend your time practicing with real tools, learning by doing, and getting ready for real work in your community.</p>
-                <br>
-                <!-- New Registration Download Box added in place of Pledge -->
-                <div class="download-box" style="margin-top: 1rem;">
-                    <h5>📋 Get Started</h5>
-                    <a href="registration-form.pdf" download="Perch_Centre_Registration_Form.pdf" class="btn btn-download">
-                        📥 Download Registration Form
-                    </a>
-                </div>
             </div>
             <div>
-                <img src="https://unsplash.com" alt="Students learning" style="width:100%; border-radius:8px;">
+                <img src="https://unsplash.com" alt="Students learning practical skills" class="about-img">
             </div>
         </div>
     </section>
 
-    <!-- Knowledge and Skills Section -->
-    <section id="courses" style="background-color: var(--light); max-width: 100%;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-            <h3>Knowledge and Skills</h3>
-            <div class="courses-grid">
-                <div class="course-card">
-                    <h4>Computing & Networking</h4>
-                    <p>Gain hands-on experience in computer hardware, operating system installation, network configurations, basic troubleshooting, and IT support essentials.</p>
-                </div>
-                <div class="course-card">
-                    <h4>Tailoring & Design</h4>
-                    <p>Master pattern drafting, garment construction, sewing machine operation, textile selection, and creative fashion design techniques.</p>
-                </div>
-                <div class="course-card">
-                    <h4>Agriculture</h4>
-                    <p>Learn sustainable crop management, soil health cultivation, livestock husbandry basic skills, and local agribusiness principles for sustainable farming.</p>
-                </div>
+    <!-- Vocational Streams / Courses Section -->
+    <section id="courses">
+        <h3>Our Vocational Streams</h3>
+        <div class="courses-grid">
+            <!-- Computing & Networking -->
+            <div class="course-card">
+                <h4>💻 Computing & Networking</h4>
+                <p>Hardware troubleshooting, operating systems installation, and local area network setups designed for technical support fields.</p>
+            </div>
+
+            <!-- Tailoring & Design -->
+            <div class="course-card">
+                <h4>🪡 Tailoring & Design</h4>
+                <p>Pattern drawing, fabric preparation, garments cutting, and operational sewing procedures to launch independent design shops.</p>
+            </div>
+
+            <!-- Agriculture -->
+            <div class="course-card">
+                <h4>🌾 Agriculture</h4>
+                <p>Sustainable crop farming practices, livestock production basic elements, and essential agribusiness tools for rural stability.</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact & Admissions Section -->
-    <section id="contact"> 
-        <h3>Contact & Admissions</h3>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h3>Contact & Enquiries</h3>
         <div class="contact-container">
             <div class="contact-info">
-                <h4>Get in Touch</h4>
-                <br>
-                <p><strong>📍 Location:</strong> Ranadi Next To Tongs, Honiara, Solomon Islands</p>
