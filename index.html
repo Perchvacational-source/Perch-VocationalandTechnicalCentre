@@ -47,6 +47,16 @@
             letter-spacing: 0.5px;
         }
 
+        .motto-bar {
+            background-color: #0b3a62;
+            color: #f5a623;
+            text-align: center;
+            padding: 0.3rem;
+            font-size: 0.85rem;
+            font-style: italic;
+            border-bottom: 2px solid var(--secondary);
+        }
+
         .nav-links {
             list-style: none;
             display: flex;
@@ -98,10 +108,31 @@
             background-color: #e09612;
         }
 
+        .download-box {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-top: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .download-box h5 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
         .btn-download {
             background-color: #27ae60;
             color: white;
-            margin-top: 1rem;
+            text-align: center;
         }
 
         .btn-download:hover {
@@ -166,6 +197,21 @@
             font-size: 1.25rem;
         }
 
+        /* Pledge Section */
+        .pledge-box {
+            background-color: #fff9f0;
+            border-left: 4px solid var(--secondary);
+            padding: 1.5rem;
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .pledge-box h4 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
         /* Contact Section */
         .contact-container {
             display: grid;
@@ -224,6 +270,9 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+    <div class="motto-bar">
+        "The fear of the Lord is the beginning of knowledge." — Proverbs 1:7
+    </div>
 
     <!-- Hero Banner -->
     <header class="hero" id="home">
@@ -240,6 +289,11 @@
                 <p>Welcome to <strong>Perch Vocational and Technical Centre</strong>. We help students learn useful, everyday job skills. Our short courses give you the training you need to find a good job quickly and support your family.</p>
                 <br>
                 <p>At our school, you will spend your time practicing with real tools, learning by doing, and getting ready for real work in your community.</p>
+                
+                <div class="pledge-box">
+                    <h4>Student Agreement Pledge</h4>
+                    <p>All enrolling students pledge to honor school standard values, fulfill financial obligations, respect training regulations, and maintain accountability within the school premises.</p>
+                </div>
             </div>
             <div>
                 <img src="https://unsplash.com" alt="Students learning" style="width:100%; border-radius:8px;">
@@ -275,32 +329,3 @@
             <div class="contact-info">
                 <h4>Get in Touch</h4>
                 <br>
-                <p><strong>📍 Location:</strong> Panatina Area, Honiara, Solomon Islands</p>
-                <p><strong>✉️ Email:</strong> admissions@perchcentre.edu.sb</p>
-                <p><strong>📞 Phone:</strong> +677 23456</p>
-                <br>
-                <p>Drop by our administration desk during weekdays from 8:00 AM to 4:30 PM for formal registration guidelines.</p>
-                
-                <!-- New Registration Download Button -->
-                <a href="registration-form.pdf" download="Perch_Registration_Form.pdf" class="btn btn-download">
-                    📥 Download Registration Form
-                </a>
-            </div>
-            <div>
-                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! Your inquiry has been simulated.');">
-                    <input type="text" placeholder="Your Full Name" required>
-                    <input type="email" placeholder="Your Email Address" required>
-                    <textarea rows="5" placeholder="Which course are you interested in?" required></textarea>
-                    <button type="submit" class="btn" style="border: none; cursor: pointer;">Send Inquiry</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Perch Vocational and Technical Centre. All Rights Reserved.</p>
-    </footer>
-
-</body>
-</html>
